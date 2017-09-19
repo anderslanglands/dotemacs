@@ -17,7 +17,7 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
-(add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'load-path "~/.emacs.d/layers")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
