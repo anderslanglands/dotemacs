@@ -19,6 +19,14 @@
   (general-evil-setup)
   (setq general-default-keymaps 'evil-normal-state-map)
   (general-define-key
+   :prefix "g"
+   "h" 'windmove-left
+   "j" 'windmove-down
+   "k" 'windmove-up
+   "l" 'windmove-right
+   )
+
+  (general-define-key
    :prefix "SPC"
 
    "<tab>" 'mode-line-other-buffer
@@ -68,6 +76,7 @@
    "il" 'imenu-list-smart-toggle
 
    "/" 'swiper
+
   )
 
   (general-define-key :keymaps 'python-mode-map
@@ -75,11 +84,6 @@
 
   (general-define-key :keymaps 'c++-mode-map
    "C-<tab>" 'clang-format-buffer
-
-   "C-h" 'windmove-left
-   "C-j" 'windmove-down
-   "C-k" 'windmove-up
-   "C-l" 'windmove-right
 
    "C-." 'rtags-find-symbol-at-point
    "C-;" 'rtags-location-stack-back
