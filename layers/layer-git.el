@@ -6,6 +6,7 @@
 (message "Loading layer-git...")
 
 (use-package magit :ensure t
+  :defer t
   :config
   (use-package evil-magit :ensure t)
   )

@@ -5,9 +5,11 @@
 ;;; Code:
 (message "Loading layer-writing...")
 
-(use-package info+ :ensure t)
+(use-package info+ :ensure t
+  :defer t)
 
-(use-package imenu-list :ensure t)
+(use-package imenu-list :ensure t
+  :defer t)
 
 (defun my-fountain-setup ()
   "Setup Fountain and Olivetti."
@@ -15,6 +17,7 @@
   )
 
 (use-package fountain-mode :ensure t
+  :defer t
   :config
   (add-hook 'fountain-mode-hook #'my-fountain-setup)
   (use-package olivetti :ensure t

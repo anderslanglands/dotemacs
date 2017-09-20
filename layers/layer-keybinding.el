@@ -32,13 +32,12 @@
    "<tab>" 'mode-line-other-buffer
    
    "b" '(:ignore t :which-key "Buffers...")
-   "bb" 'ivy-switch-buffer
-   "bB" 'switch-to-buffer-other-window
+   "bb" 'helm-mini
    "bd" (lambda () (interactive (kill-buffer (current-buffer))))
 
    "f" '(:ignore t :which-key "Files...")
    "fs" 'save-buffer
-   "ff" '(counsel-find-file)
+   "ff" 'helm-find-files
    "fed" (lambda () (interactive) (find-file user-init-file))
    "feD" (lambda () (interactive)
            (find-file-other-window user-init-file))
@@ -59,23 +58,23 @@
    "rr" 'rtags-rename-symbol
 
    "p" '(:ignore t :which-key "Projectile...")
-   "pp" 'counsel-projectile-switch-project
-   "pf" 'counsel-projectile-find-file
+   "pp" 'helm-projectile-switch-project
+   "pf" 'helm-projectile-find-file
    "pF" 'projectile-find-file-other-window
-   "po" 'projectile-find-other-file
-   "pa" 'counsel-projectile-ag
+   "po" 'helm-projectile-find-other-file
+   "pa" 'helm-projectile-ag
    "pc" 'projectile-compile-project
 
    "g" '(:ignore t :which-key "Git...")
    "gs" 'magit-status
 
    "t" '(:ignore t :which-key "Theme...")
-   "ts" 'counsel-load-theme
+   ;; "ts" 'counsel-load-theme
 
    "i" '(:ignore t :which-key "Imenu...")
    "il" 'imenu-list-smart-toggle
 
-   "/" 'swiper
+   ;; "/" 'swiper
 
   )
 

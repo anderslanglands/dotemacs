@@ -5,9 +5,9 @@
 ;;; Code:
 (message "Loading layer-themes...")
 
-(use-package foggy-night-theme :ensure t)
+;; (use-package foggy-night-theme :ensure t)
 (use-package base16-theme :ensure t)
-(use-package sourcerer-theme :ensure t)
+;; (use-package sourcerer-theme :ensure t)
 (load-theme 'base16-ocean t)
 
 

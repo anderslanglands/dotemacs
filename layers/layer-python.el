@@ -5,7 +5,8 @@
 ;;; Code:
 (message "Loading layer-python...")
 
-(use-package yapfify :ensure t)
+(use-package yapfify :ensure t
+  :defer t)
 
 (use-package anaconda-mode :ensure t
     :diminish '(anaconda-mode . "")

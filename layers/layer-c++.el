@@ -8,21 +8,27 @@
 ;; .h files are c++ by default
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
-(use-package clang-format :ensure t)
+(use-package clang-format :ensure t
+  )
 
 (use-package rtags :ensure t
     :config
     (setq rtags-autostart-diagnostics t)
     (setq rtags-completions-enabled t)
-    (setq rtags-display-result-backend 'ivy)
+    ;; (setq rtags-display-result-backend 'ivy)
+    (setq rtags-display-result-backend 'helm)
     (eval-after-load 'company
     '(add-to-list
         'company-backends 'company-rtags))
     )
 
-(use-package company-rtags :ensure t)
-(use-package ivy-rtags :ensure t)
-(use-package flycheck-rtags :ensure t)
+(use-package company-rtags :ensure t
+  )
+;; (use-package ivy-rtags :ensure t)
+(use-package helm-rtags :ensure t
+  )
+(use-package flycheck-rtags :ensure t
+  )
 
 (defun my-rtags-setup ()
   "RTags setup function."
