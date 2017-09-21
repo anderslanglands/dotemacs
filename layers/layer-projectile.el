@@ -8,7 +8,6 @@
 (use-package projectile :ensure t
   :config
   ;; (use-package counsel-projectile :ensure t)
-  (use-package helm-projectile :ensure t)
   (setq projectile-mode-line
         '(:eval (format " %s" (projectile-project-name))))
   (projectile-mode)

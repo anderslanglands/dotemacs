@@ -77,8 +77,8 @@
 (mac-auto-operator-composition-mode 1)
 
 ;; Make Emacs split window horizontally when opening multiple files
-(setq split-height-threshold nil) 
-(setq split-width-threshold 0) 
+(setq-default split-height-threshold nil) 
+(setq-default split-width-threshold 0) 
 
 (provide 'layer-defaults)
 ;;; layer-defaults.el ends here
