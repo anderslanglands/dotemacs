@@ -35,5 +35,7 @@
 (add-hook 'c-mode-hook #'my-rtags-setup)
 (add-hook 'c++-mode-hook #'my-rtags-setup)
 
+(c-set-offset 'innamespace 0)
+
 (provide 'layer-c++)
 ;;; layer-c++.el ends here
