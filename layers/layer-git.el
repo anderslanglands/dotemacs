@@ -20,6 +20,8 @@
 ;;                     nil
 ;;                   '(display-buffer-same-window)))))
   (use-package evil-magit :ensure t)
+  ; start commit message in insert mode
+  (add-hook 'git-commit-mode-hook 'evil-insert-state)
   )
 
 (defun my-vc-git-mode-line-string (orig-fn &rest args)
