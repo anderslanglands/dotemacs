@@ -23,6 +23,8 @@
 (require 'layer-cmake)
 (require 'layer-python)
 (require 'layer-c++)
+(require 'layer-csharp)
+(require 'layer-cuda)
 (require 'layer-writing)
 ;; (require 'layer-spaceline)
 (require 'layer-themes)

@@ -56,6 +56,7 @@
    "ri" 'rtags-symbol-info
    "rt" 'rtags-symbol-type
    "rr" 'rtags-rename-symbol
+   "rf" 'rtags-find-symbol-at-point
 
    "p" '(:ignore t :which-key "Projectile...")
    "pp" 'helm-projectile-switch-project

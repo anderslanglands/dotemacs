@@ -14,21 +14,11 @@
 (use-package rtags :ensure t
     :config
     (setq rtags-autostart-diagnostics t)
-    (setq rtags-completions-enabled t)
-    ;; (setq rtags-display-result-backend 'ivy)
-    (setq rtags-display-result-backend 'helm)
-    (eval-after-load 'company
-    '(add-to-list
-        'company-backends 'company-rtags))
+    (setq rtags-display-result-backend 'ivy)
     )
 
-(use-package company-rtags :ensure t
-  )
-;; (use-package ivy-rtags :ensure t)
-(use-package helm-rtags :ensure t
-  )
-(use-package flycheck-rtags :ensure t
-  )
+(use-package ivy-rtags :ensure t)
+(use-package flycheck-rtags :ensure t)
 
 (defun my-rtags-setup ()
   "RTags setup function."
@@ -40,6 +30,21 @@
 )
 (add-hook 'c-mode-hook #'my-rtags-setup)
 (add-hook 'c++-mode-hook #'my-rtags-setup)
+
+(use-package ycmd :ensure t
+  :config
+  (add-hook 'c++-mode-hook 'ycmd-mode)
+  (set-variable 'ycmd-server-command '("python" "/Users/anders/code/ycmd/ycmd"))
+  (set-variable 'ycmd-global-config "/Users/anders/code/ycm_global_config.py")
+  (set-variable 'ycmd-extra-conf-whitelist '("/Users/anders/code/*"))
+  )
+
+(use-package company-ycmd :ensure t
+  :config
+  (company-ycmd-setup)
+  )
+
+(c-set-offset 'innamespace 0)
 
 (provide 'layer-c++)
 ;;; layer-c++.el ends here
