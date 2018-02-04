@@ -53,6 +53,9 @@
     (with-helm-alive-p
       (helm-quit-and-execute-action 'helm-buffer-switch-to-new-window)))
 
+(setq helm-window-show-buffers-function 'helm-window-default-split-fn
+      helm-window-prefer-horizontal-split 'decide)
+
   (define-key helm-buffer-map (kbd "C-<return>") #'helm-buffer-switch-new-window)
   (define-key helm-projectile-find-file-map (kbd "C-<return>") #'helm-buffer-find-new-window)
   )

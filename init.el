@@ -29,7 +29,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (omnisharp company-cmake cmake-font-lock imenu-list olivetti fountain-mode yapfify py-yapf fill-column-indicator company-anaconda anaconda-mode dim cyphejor spaceline-config cmake zenburn-theme which-key use-package tangotango-theme sourcerer-theme powerline-evil moe-theme ivy-rtags heroku-theme gruvbox-theme general foggy-night-theme flycheck-rtags flatland-theme evil-surround evil-magit evil-commentary esup dtrt-indent counsel-projectile company-ycmd company-rtags color-theme-sanityinc-tomorrow clang-format base16-theme))))
+    (markdown-mode company-lsp lsp-mode omnisharp company-cmake cmake-font-lock imenu-list olivetti fountain-mode yapfify py-yapf fill-column-indicator company-anaconda anaconda-mode dim cyphejor spaceline-config cmake zenburn-theme which-key use-package tangotango-theme sourcerer-theme powerline-evil moe-theme ivy-rtags heroku-theme gruvbox-theme general foggy-night-theme flycheck-rtags flatland-theme evil-surround evil-magit evil-commentary esup dtrt-indent counsel-projectile company-ycmd company-rtags color-theme-sanityinc-tomorrow clang-format base16-theme))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
